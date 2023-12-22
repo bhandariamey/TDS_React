@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --color-primary : #f4f0ec;
+  --color-lightblack : #4d5053;
+  --color-black : #292f36;
+  --color-white : #FFF
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* DM Serif Display */
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url('../public/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype');
+  font-weight: 900; /* Black weight is typically 900 */
+  font-style: normal;
+}
+
+/* Jost */
+@font-face {
+  font-family: 'Jost';
+  src: url('../public/fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
 }

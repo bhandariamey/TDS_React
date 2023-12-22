@@ -1,0 +1,43 @@
+.Wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px;
+    padding: 30px 0px;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.navLinks a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.brandName{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: 400;
+    font-size: 25px;
+}
+
+@media(max-width:991px){
+    .Wrapper{
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items on smaller screens */
+    }
+    .navLinks{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+}

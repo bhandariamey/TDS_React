@@ -1,0 +1,35 @@
+
+.heroImage{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px 0px 0px 390px;
+    margin-left: 1px;
+}
+
+.heroTitle{
+    position: absolute;
+    top: 25vh;
+    left: 8vw;
+    color: var(--color-black);
+    font-size: 5vw;
+    width: 50%;
+    line-height: 1.2;
+    font-weight: 100;
+    font-family: "DM Serif Display";
+    text-align: left;
+    background: transparent;
+    backdrop-filter: blur(3px);
+}
+
+.herobody{
+    position: absolute;
+    top: 60vh;
+    left: 8vw;
+    color: var(--color-black);
+    font-size: 2vw;
+    width: 50vw;
+    line-height: 1.2;
+    text-align: left;
+    background: transparent;
+    backdrop-filter: blur(3px);
+}
