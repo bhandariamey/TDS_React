@@ -9,7 +9,7 @@
 .heroTitle{
     position: absolute;
     top: 25vh;
-    left: 8vw;
+    transform: translateX(8vw);
     color: var(--color-black);
     font-size: 5vw;
     width: 50%;
@@ -23,8 +23,8 @@
 
 .herobody{
     position: absolute;
-    top: 60vh;
-    left: 8vw;
+    top: 65vh;
+    transform: translateX(8vw);
     color: var(--color-black);
     font-size: 2vw;
     width: 50vw;

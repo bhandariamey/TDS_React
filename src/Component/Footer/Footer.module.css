@@ -29,7 +29,6 @@
 
 .socialMedia{
     flex-direction: row;
-    justify-content: center;
     cursor: pointer;
     margin: 30px 350px;
     display: flex;

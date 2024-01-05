@@ -1,0 +1,16 @@
+
+
+.quote{
+    color: #cda274;
+    text-align: center;
+    background-color: #f4f0ec;
+    background-image: url('../../Assets/AboutUs/comma.svg');
+    background-position: 50% 22%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    padding: 120px 60px 60px;
+    font-family: "DM Serif Display";
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 50px 50px;
+}

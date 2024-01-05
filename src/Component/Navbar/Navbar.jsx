@@ -13,11 +13,11 @@ export default function Navbar(){
             </Link>
             
             <div className={styles.navLinks}>
-                <Link to="/">Home </Link>
-                <Link to="">About</Link>
-                <Link to="">Services</Link>
-                <Link to="">Sites</Link>
-                <Link to="">Contact</Link>
+                <Link to="/" className={styles.navItems}>Home </Link>
+                <Link to="/about"  className={styles.navItems}>About</Link>
+                <Link to=""  className={styles.navItems}>Services</Link>
+                <Link to=""  className={styles.navItems}>Sites</Link>
+                <Link to=""  className={styles.navItems}>Contact</Link>
             </div>
         </div>
 
