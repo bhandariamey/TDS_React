@@ -1,0 +1,22 @@
+.button{
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    right: 30px;
+}
+
+.button Button{
+    color: var(--color-black);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background-color: var(--color-primary);
+    border: none;
+    
+}
+
+.button Button:hover{
+    border: none;
+    background-color: antiquewhite;
+}

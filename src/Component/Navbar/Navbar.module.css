@@ -11,6 +11,10 @@
     width: 50%;
 }
 
+.navItems:hover{
+    color: gray;
+}
+
 .navLinks a{
     display: flex;
     align-items: center;
