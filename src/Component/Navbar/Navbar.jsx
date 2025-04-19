@@ -1,25 +1,53 @@
-import styles from './Navbar.module.css'
-import {ReactComponent as Logo} from '../../Assets/logo.svg'
+import "./Navbar.scss"
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import logo from "../../Assets/Icons/logo.svg";
+import Hamburger from "../../Assets/Icons/hamBurger.svg";
 
-export default function Navbar(){
-    return(<>
+const Navbar = () =>{
+  const [showHamMenu, setShowHamMenu] = useState(false);
+  const pages = ['Home','Sites', 'About', 'Contact','Services'];
 
-        <div className={styles.Wrapper}>
-            
-            <Link to="/" className={styles.brandName}>
-                <Logo/>
-                <div>The design spell</div>
-            </Link>
-            
-            <div className={styles.navLinks}>
-                <Link to="/" className={styles.navItems}>Home </Link>
-                <Link to="/about"  className={styles.navItems}>About</Link>
-                <Link to=""  className={styles.navItems}>Services</Link>
-                <Link to=""  className={styles.navItems}>Sites</Link>
-                <Link to=""  className={styles.navItems}>Contact</Link>
-            </div>
-        </div>
+  useEffect(()=>{
+    window.addEventListener("resize",handleScreenSizeChange);
+    return () => {
+      window.removeEventListener("resize",handleScreenSizeChange);
+    }
+  },[])
 
-    </>)
+  const handleScreenSizeChange= () => {                  
+    if(window.innerWidth > 900){        
+      setShowHamMenu(false);
+    }
+  }
+  const handleHamburgerClick = () => {
+    setShowHamMenu(!showHamMenu);
+  }
+  return (
+   <>
+    <div className="nav-wrapper">
+      <Link to="/" className="brandName">
+        <img src={logo} alt="logo" className="logo" /> 
+        <span>The Design Spell</span>
+      </Link>
+      <div className="navLinks">
+        {pages.map((page, index) => {
+          return <Link key={index} to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} className="navLink">{page}</Link>
+        })}</div>
+      <button className="hamburgerBtn" onClick={handleHamburgerClick}>
+        <img src={Hamburger} alt="hamburger button" className="hamburgerIcon" />
+      </button>
+    </div>
+
+    {
+      showHamMenu && <div className="hamMenu">
+          {pages.map((page, index) => {
+            return <Link onClick={() => setShowHamMenu(false)} key={index} to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} className="hamLink">{page}</Link>
+          })}
+      </div>
+    }
+   </>
+    )
 }
+
+export default Navbar;
