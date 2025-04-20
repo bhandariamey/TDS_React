@@ -14,7 +14,7 @@ export default function Compare(){
     }
 
     return(<>
-       <div className="Wrapper">
+       <div className="compare-wrapper">
         <p className="sliderTitle">With <span style={{color:'#121212'}}>The Design Spell</span>, transforming your space is as smooth an experience as sliding this bar</p>
         <div className='container'>
                 <div className='img background-img'></div>

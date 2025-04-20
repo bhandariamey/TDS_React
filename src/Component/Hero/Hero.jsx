@@ -1,17 +1,15 @@
-import styles from './Hero.module.css'
+import "./Hero.scss"
 import HeroImage from '../../Assets/heroImage.jpg'
 import HeroService from '../HeroService/HeroService'
 
 export default function Hero(){
     return(<>
-        <div className = {styles.Wrapper}>
-            <img className = {styles.heroImage} src={HeroImage} alt="Hero"/>
-            <p className={styles.heroTitle}>Let's Elevate Your Living Experience</p>
-            <p className={styles.herobody}>Unlocking Possibilities through Visionary Design: Elevating Spaces
-            with Ingenuity, Precision, and Passion.</p>
+        <div className = "hero-wrapper">
+            <img className = "heroImage" src={HeroImage} alt="Hero"/>
+            <span className="heroTitle">Let's Elevate Your Living Experience</span>
+            <span className="herobody">Unlocking Possibilities through Visionary Design: Elevating Spaces
+            with Ingenuity, Precision, and Passion.</span>
         </div>
-
         <HeroService/>
-
         </>)
 }
